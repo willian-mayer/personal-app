@@ -1,12 +1,21 @@
 <section class="hero">
   <div class="hero-content">
-    <h1 class="hero-title">Bienvenido a Mi Aplicación</h1>
-    <p class="hero-subtitle">
-      Construye aplicaciones increíbles con Angular
-    </p>
-    <div class="hero-buttons">
-      <button class="btn btn-primary">Comenzar</button>
-      <button class="btn btn-secondary">Saber más</button>
+    <div *ngIf="loading" class="loading">
+      <p>Cargando...</p>
+    </div>
+
+    <div *ngIf="error" class="error">
+      <p>Error al cargar el contenido. Por favor, intenta más tarde.</p>
+    </div>
+
+    <div *ngIf="!loading && !error && heroData">
+      <h1 class="hero-title">{{ heroData.title }}</h1>
+      <p class="hero-subtitle">{{ heroData.subtitle }}</p>
+      <p class="hero-desc">{{ heroData.desc }}</p>
+      <div class="hero-buttons">
+        <button class="btn btn-primary">Comenzar</button>
+        <button class="btn btn-secondary">Saber más</button>
+      </div>
     </div>
   </div>
 </section>

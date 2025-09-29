@@ -92,3 +92,21 @@
     font-size: 1.2rem;
   }
 }
+
+.loading, .error {
+  text-align: center;
+  padding: 2rem;
+}
+
+.error {
+  color: #ff6b6b;
+}
+
+.hero-desc {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.85;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
