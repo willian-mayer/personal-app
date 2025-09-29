@@ -1,8 +1,11 @@
 .navbar {
-  background-color: #1a1a2e;
+  background-color: rgba(26, 26, 46, 0.95); /* Semi-transparente */
+  backdrop-filter: blur(10px); /* Efecto de desenfoque */
   padding: 1rem 0;
-  position: sticky;
+  position: fixed; /* Cambiado de sticky a fixed */
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -111,7 +114,8 @@
     left: -100%;
     top: 70px;
     flex-direction: column;
-    background-color: #1a1a2e;
+    background-color: rgba(26, 26, 46, 0.98);
+    backdrop-filter: blur(10px);
     width: 100%;
     text-align: center;
     transition: 0.3s;
