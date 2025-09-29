@@ -1,0 +1,147 @@
+.feature-section {
+  background-color: white;
+  padding: 6rem 0;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .feature-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+.feature-content {
+  padding-top: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .feature-content {
+    padding-right: 2rem;
+  }
+}
+
+.feature-text {
+  max-width: 32rem;
+}
+
+@media (min-width: 1024px) {
+  .feature-text {
+    max-width: none;
+  }
+}
+
+.feature-badge {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #667eea;
+  margin-bottom: 0.5rem;
+}
+
+.feature-title {
+  margin-top: 0.5rem;
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: #111827;
+  line-height: 1.2;
+}
+
+@media (min-width: 640px) {
+  .feature-title {
+    font-size: 3rem;
+  }
+}
+
+.feature-subtitle {
+  margin-top: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: #374151;
+}
+
+.feature-list {
+  margin-top: 2.5rem;
+  max-width: 36rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .feature-list {
+    max-width: none;
+  }
+}
+
+.feature-item {
+  position: relative;
+  padding-left: 2.25rem;
+}
+
+.feature-item-title {
+  display: inline;
+  font-weight: 600;
+  color: #111827;
+}
+
+.feature-icon {
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #667eea;
+}
+
+.feature-item-desc {
+  display: inline;
+  color: #4b5563;
+}
+
+.feature-image {
+  width: 100%;
+  max-width: none;
+  border-radius: 0.75rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  ring: 1px solid rgba(107, 114, 128, 0.1);
+}
+
+@media (min-width: 640px) {
+  .feature-image {
+    width: 57rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .feature-image {
+    margin-left: -1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .feature-image {
+    margin-left: 0;
+  }
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 4rem 2rem;
+  font-size: 1.125rem;
+}
+
+.error {
+  color: #ef4444;
+}

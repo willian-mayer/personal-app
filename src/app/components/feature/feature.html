@@ -1,1 +1,39 @@
-<p>feature works!</p>
+<section class="feature-section">
+  <div class="container">
+    <div *ngIf="loading" class="loading">
+      <p>Cargando características...</p>
+    </div>
+
+    <div *ngIf="error" class="error">
+      <p>Error al cargar las características.</p>
+    </div>
+
+    <div *ngIf="!loading && !error && featureData" class="feature-grid">
+      <div class="feature-content">
+        <div class="feature-text">
+          <h2 class="feature-badge">{{ featureData.badge }}</h2>
+          <p class="feature-title">{{ featureData.title }}</p>
+          <p class="feature-subtitle">{{ featureData.subtitle }}</p>
+          
+          <dl class="feature-list">
+            <div *ngFor="let item of featureData.features" class="feature-item">
+              <dt class="feature-item-title">
+                <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor">
+                  <path [attr.d]="item.icon" clip-rule="evenodd" fill-rule="evenodd" />
+                </svg>
+                {{ item.title }}
+              </dt>
+              <dd class="feature-item-desc">{{ item.description }}</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+      
+      <img 
+        [src]="featureData.image" 
+        alt="Feature screenshot" 
+        class="feature-image"
+      />
+    </div>
+  </div>
+</section>
