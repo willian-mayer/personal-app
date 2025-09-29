@@ -1,0 +1,26 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <a href="#" class="navbar-logo">MiApp</a>
+    
+    <button class="navbar-toggle" (click)="toggleMenu()" [class.active]="menuOpen">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <ul class="navbar-menu" [class.active]="menuOpen">
+      <li class="navbar-item">
+        <a href="#inicio" class="navbar-link" (click)="closeMenu()">Inicio</a>
+      </li>
+      <li class="navbar-item">
+        <a href="#servicios" class="navbar-link" (click)="closeMenu()">Servicios</a>
+      </li>
+      <li class="navbar-item">
+        <a href="#proyectos" class="navbar-link" (click)="closeMenu()">Proyectos</a>
+      </li>
+      <li class="navbar-item">
+        <a href="#contacto" class="navbar-link" (click)="closeMenu()">Contacto</a>
+      </li>
+    </ul>
+  </div>
+</nav>
