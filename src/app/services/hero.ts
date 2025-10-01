@@ -13,11 +13,9 @@ export interface HeroSection {
   providedIn: 'root'
 })
 export class HeroService {
-  private apiUrl = 'http://localhost:8080/hero-sections';
-
   constructor(private http: HttpClient) { }
 
-  getHeroSections(): Observable<HeroSection[]> {
-    return this.http.get<HeroSection[]>(this.apiUrl);
+  getHeroSection(): Observable<HeroSection> {
+    return this.http.get<HeroSection>('/data/hero-section.json');
   }
 }

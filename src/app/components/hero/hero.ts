@@ -16,13 +16,13 @@ export class Hero implements OnInit {
   constructor(private heroService: HeroService) {}
 
   ngOnInit(): void {
-    this.heroService.getHeroSections().subscribe({
+    this.heroService.getHeroSection().subscribe({
       next: (data) => {
-        this.heroData = data[0]; // Tomamos el primer elemento
+        this.heroData = data; // Ya no necesitas data[0]
         this.loading = false;
       },
       error: (err) => {
-        console.error('Error al cargar hero sections:', err);
+        console.error('Error al cargar hero section:', err);
         this.error = true;
         this.loading = false;
       }
