@@ -1,8 +1,32 @@
+/* Poppins Font Variable */
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/Poppins/Poppins-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900; /* Soporta todos los pesos */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Si Poppins tiene versión itálica, agrégala también */
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/Poppins/Poppins-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
 .navbar {
-  background-color: rgba(26, 26, 46, 0.95); /* Semi-transparente */
-  backdrop-filter: blur(10px); /* Efecto de desenfoque */
+  background-color: rgba(26, 26, 46, 0.95);
+  backdrop-filter: blur(10px);
   padding: 1rem 0;
-  position: fixed; /* Cambiado de sticky a fixed */
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -20,15 +44,20 @@
 }
 
 .navbar-logo {
-  color: white;
-  font-size: 1.5rem;
-  font-weight: bold;
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .navbar-logo:hover {
-  color: #667eea;
+  transform: scale(1.05);
+}
+
+.navbar-logo-img {
+  height: 30px;
+  width: auto;
+  object-fit: contain;
 }
 
 .navbar-menu {
