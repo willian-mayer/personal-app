@@ -1,3 +1,27 @@
+/* Poppins Font Variable */
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/Poppins/Poppins-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900; /* Soporta todos los pesos */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Si Poppins tiene versión itálica, agrégala también */
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/Poppins/Poppins-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
 .navbar {
   background-color: rgba(26, 26, 46, 0.95);
   backdrop-filter: blur(10px);

@@ -12,7 +12,7 @@
 
     <ul class="navbar-menu" [class.active]="menuOpen">
       <li *ngFor="let route of routes" class="navbar-item">
-        <a [href]="route.path" class="navbar-link" (click)="closeMenu()">
+        <a [href]="route.path" class="navbar-link poppins-medium" (click)="closeMenu()">
           {{ route.label }}
         </a>
       </li>
